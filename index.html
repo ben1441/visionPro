@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>VisionPro: Smart Webcam</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Manovah Benny">
+
+    <!-- Import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Helvetica+Neue&display=swap" rel="stylesheet">
+
+  </head>  
+  <body>
+    <div class="page-1">
+      <div class="heading">
+        <h1>Discover the power of AI</h1>
+      </div>
+      <div class="short">
+        <p>Multiple object detection using pre-trained model</p>
+        <a href="./how.html"><button class="how-button">How it works?</button></a>
+      </div>
+    </div>
+    <h1 class="content-header">Object Detection</h1>
+    <div class="content">
+      <div class="content-left">
+        <div class="content-left-heading">
+          <p>What is object detection?</p>
+        </div>
+        <div class="content-left-para">
+          <p>Object detection is a computer vision technique that allows us to identify and locate objects in an image or video. With this kind of identification and localization, object detection can be used to count objects in a scene and determine and track their precise locations, all while accurately labeling them.</p>
+        </div>
+      </div>
+      <div class="content-right">
+        <div class="content-right-heading">
+          <p>What it does?</p>
+        </div>
+        <div class="content-right-para">
+          <p>It detects multiple objects in a video and labels them with a bounding box. It also shows the confidence score of the object detected.</p>
+        </div>
+        <div class="card-image"></div>
+      </div>
+    </div>
+    <div class="demo-page">
+      <div class="demo-header">
+        <h1>Try It.</h1>
+        <p>Wait for the model to load. Grant access to camera</p>
+      </div>
+    </div>
+    <section id="demos" class="invisible vidSec">
+      <div class="frame">
+        <div id="liveView" class="videoView">
+        <button id="webcamButton">Enable Webcam</button>
+        <video id="webcam" autoplay></video>
+        </div>
+      </div>
+      
+    </section>
+    <footer>
+      <h1 class="dev">Designed & Developed By -</h1>
+      <h2 class="my-name from-indigo-500 via-purple-500 to-pink-500">
+        Manovah, Mueez and Sharath
+      </h2>
+
+      <p>&copy; 2023 ItsBen Inc.</p>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.11.0/dist/tf.min.js" type="text/javascript"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd"></script>
+
+    <script src="./index.js"></script> 
+  </body>
+</html>

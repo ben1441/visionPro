@@ -1,0 +1,346 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  background-color: #f5f5f7;
+}
+
+video {
+  clear: both;
+  display: block;
+}
+
+section {
+  opacity: 1;
+  transition: opacity 500ms ease-in-out;
+}
+
+header,
+footer {
+  clear: both;
+}
+
+.removed {
+  display: none;
+}
+
+.invisible {
+  opacity: 0.2;
+}
+
+.note {
+  font-style: italic;
+  font-size: 130%;
+}
+
+.videoView,
+.classifyOnClick {
+  position: relative;
+  float: left;
+  width: 100%;
+  margin: 2% 1%;
+  cursor: pointer;
+}
+
+.videoView p,
+.classifyOnClick p {
+  position: absolute;
+  padding: 5px;
+  background-color: rgba(255, 111, 0, 0.85);
+  color: #fff;
+  border: 1px dashed rgba(255, 255, 255, 0.7);
+  z-index: 2;
+  font-size: 12px;
+  margin: 0;
+}
+
+.highlighter {
+  background: rgba(0, 255, 0, 0.25);
+  border: 1px dashed #fff;
+  z-index: 1;
+  position: absolute;
+}
+
+.classifyOnClick {
+  z-index: 0;
+}
+
+.classifyOnClick img {
+  width: 100%;
+}
+
+.page-1 {
+  margin: 2em;
+  color: #3d3d3d;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.heading {
+  font-size: 36px;
+  text-align: center;
+  color: #333;
+  padding: 20px;
+}
+
+.heading h1,
+.heading p,
+.heading button {
+  margin: 10px 0;
+}
+
+.short {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #29292b;
+}
+
+.short ul {
+  text-align: left;
+}
+
+.how-button {
+  background-color: #0070c9; /* Apple's button color */
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.new-page {
+  margin-top: 100vh;
+  transition: margin-top 0.5s ease-in-out;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 50px;
+}
+
+.content-header {
+  color: #e66704;
+  font-size: 40px;
+  position: absolute;
+  left: 100px;
+  top: 750px;
+}
+
+.content-left,
+.content-right {
+  flex: 1;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  margin: 0 20px;
+  padding: 50px;
+  height: 500px;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.content-left:hover,
+.content-right:hover {
+  transform: scale(1.02);
+}
+
+.content-left .content-left-heading p,
+.content-right .content-right-heading p {
+  font-size: 24px;
+  color: #e66704;
+  font-weight: 600;
+}
+
+.content-left .content-left-para p,
+.content-right .content-right-para p {
+  font-size: 24px; /* Adjust the font size as needed */
+  color: #29292b;
+  /* font-weight: 500; */
+}
+
+.card-image {
+  width: 100%;
+  height: 300px;
+  background-image: url(./assets/obj_detection.jpeg);
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  margin-top: 30px;
+}
+
+.demo-page {
+  margin: 2em;
+  color: #3d3d3d;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.demo-header {
+  font-size: 36px;
+  text-align: center;
+  color: #333;
+  padding: 20px;
+}
+
+.vidSec {
+  position: absolute;
+  top: 260%;
+  left: 25%;
+  font-size: 36px;
+  text-align: center;
+  color: #333;
+  padding: 20px;
+}
+
+.vidSec button {
+  position: relative;
+  left: 65%;
+  background-color: #0070c9; /* Apple's button color */
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+footer {
+  position: absolute;
+  bottom: -260%;
+  /* left: 42%; */
+  width: 1400px;
+  text-align: center;
+  background-color: #f5f5f7;
+  color: #999;
+  padding: 20px 0;
+  font-size: 14px;
+  border-top: 1px solid #ddd;
+}
+
+footer p {
+  margin: 0;
+}
+
+.my-name {
+  font-size: 40px;
+  background: linear-gradient(to right, var(--from-indigo-500), var(--via-purple-500), var(--to-pink-500));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Define the gradient colors as custom properties */
+.from-indigo-500 {
+  --from-indigo-500: #5A67D8;
+}
+
+.via-purple-500 {
+  --via-purple-500: #8B5CF6;
+}
+
+.to-pink-500 {
+  --to-pink-500: #EC4899;
+}
+
+.blue {
+  color: #027fff;
+}
+
+.green {
+  color: #0b9d46;
+}
+
+.red {
+  color: #ff3e17;
+}
+
+.card-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+.container-1 {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.container-2 {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: flex-end;
+}
+
+.first-card {
+  background-color: white;
+  border-radius: 28px;
+  padding: 40px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  width: 500px;
+  height: 500px;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.second-card {
+  background-color: white;
+  border-radius: 28px;
+  padding: 40px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+  width: 500px;
+  height: 170px;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.third-card {
+  background-color: white;
+  border-radius: 28px;
+  padding: 40px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  height: 200px;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.first-card:hover,
+.second-card:hover,
+.third-card:hover {
+  transform: scale(1.02);
+}
+
+.first-card h2,
+.second-card h2,
+.third-card h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.card-container p {
+  font-size: 24px;
+}
+
+.how-footer {
+  bottom: -130%;
+  text-align: center;
+  background-color: #f5f5f7;
+  color: #999;
+  padding: 20px 0;
+  font-size: 14px;
+  border-top: 1px solid #ddd;
+}
